@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'websocket-test-app';
+
+  newMessage = new FormControl('');
+  websocketMessage=''
+  
+  sendMessage() {
+    this.websocketMessage = 'received: "'+this.newMessage.value+'"';
+  }
+  
 }
