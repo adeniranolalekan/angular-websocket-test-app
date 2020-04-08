@@ -16,7 +16,7 @@ export class AppComponent {
   wsSubscription:Subscription
   constructor(private websocketService:WebsocketService){
     this.wsSubscription =
-      this.websocketService.createObservableSocket("ws://localhost:8085")
+      this.websocketService.createObservableSocket("ws://localhost:8081/ws")
        .subscribe(
         data => this.websocketMessage = data,
          err => console.log( 'err'),
