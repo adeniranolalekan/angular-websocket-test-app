@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs'
+import {Observable} from 'rxjs';
 
+
+const CONNECTION = new WebSocket("wss://javascript.info/article/websocket/chat/ws");
 @Injectable({
   providedIn: 'root',
 })
-const CONNECTION = new WebSocket("wss://javascript.info/article/websocket/chat/ws");
 export class WebsocketService {
     
     ws: WebSocket;
